@@ -1,0 +1,39 @@
+-- DIGITAL DE-MULTIPLEXER 1to2
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+-- Dichiarazione entità
+
+entity demux is
+	port(		
+		switch	      : in  std_logic; -- selettore d'uscite
+		
+		sensors_data	: in std_logic_vector(3 downto 0);
+		
+		out_0      		: out std_logic_vector(3 downto 0);
+		out_1		  		: out std_logic_vector(3 downto 0)
+		);
+end demux;
+
+architecture rtl of demux is
+	begin
+	
+	input_selector: process(switch, data_in)
+		begin
+			case switch is
+			-- switch off = funzionamento automatico
+				when '0' =>
+					led_out <= led_0;
+					seg_out <= seg_0;
+			-- switch on = funzionamento manuale
+				when '1' =>
+					led_out <= led_1;
+					seg_out <= seg_1;
+				when others =>
+					NULL;
+			end case;
+		end process input_selector;
+
+end rtl;

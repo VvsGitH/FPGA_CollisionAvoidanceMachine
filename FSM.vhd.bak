@@ -1,0 +1,49 @@
+-- MACCHINA A STATI FINITI
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+
+entity FSM is 
+	port (
+	clock		: in std_logic; -- segnale di clock
+	reset		: in std_logic; -- segnale di reset
+	-- vettori di input
+	v1			: in bit_vector(4 downto 0);
+	v2			: in std_logic;
+	v3			: in std_logic;
+	v4			: in std_logic;
+	v5			: in std_logic;
+	v6			: in std_logic;
+	v7			: in std_logic;
+	v8			: in std_logic;
+	v9			: in std_logic;
+	v10		: in std_logic;
+	v11		: in std_logic;
+	v12		: in std_logic;
+	v13		: in std_logic;
+	v14		: in std_logic;
+	v15		: in std_logic;
+	v16		: in std_logic;
+	-- segnali di accensione dei LED
+	l0			: out std_logic;
+	l1			: out std_logic;
+	l2			: out std_logic;
+	l3			: out std_logic;
+	l4			: out std_logic;
+	l5			: out std_logic;
+	l6			: out std_logic;
+	l7			: out std_logic;
+	l8			: out std_logic;
+	-- segnali di accensione del 7 segmenti
+	s0			: out std_logic;
+	s1			: out std_logic;
+	s2			: out std_logic;
+	s3			: out std_logic;
+	s4			: out std_logic;
+	s5			: out std_logic;
+	s6			: out std_logic;
+	);
+end entity FSM;
+
+

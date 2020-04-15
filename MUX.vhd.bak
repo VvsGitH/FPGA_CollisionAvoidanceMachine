@@ -1,0 +1,25 @@
+-- DIGITAL MULTIPLEXER
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+-- Dichiarazione entità
+
+entity clock_div is
+	port(
+		i_clk         : in  std_logic; -- clock a 50Mhz
+		reset         : in  std_logic; -- reset
+		
+		switch	     : in  std_logic; -- selettore d'ingressi
+		
+		led_1			  : in std_logic_vector(8 downto 0);
+		seg_1			  : in std_logic_vector(6 downto 0);
+		led_2			  : in std_logic_vector(8 downto 0);
+		seg_2			  : in std_logic_vector(6 downto 0);
+		
+		led_out       : out std_logic_vector(8 downto 0);
+		seg_out		  : out std_logic_vector(6 downto 0);
+		
+		);
+end clock_div;
